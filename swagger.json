@@ -1,0 +1,62 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Spring boot jaxrs swagger integration"
+  },
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "users"
+    },
+    {
+      "name": "Users"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Users list",
+        "description": "",
+        "operationId": "allUsers",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "An array of users",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "500": {
+            "description": "Unexpected error (todo)",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
