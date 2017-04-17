@@ -2,9 +2,7 @@ package com.kt.examples.rs.configuration;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.wadl.internal.WadlResource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 
 import com.kt.examples.rs.controller.UserController;
 
@@ -14,10 +12,6 @@ import io.swagger.jaxrs.listing.SwaggerSerializers;
 
 @Configuration
 public class JerseyConfig extends ResourceConfig {
-
-  @Autowired
-  Environment env;
-  // make parameters
 
   public JerseyConfig() {
     this.registerEndpoints();
